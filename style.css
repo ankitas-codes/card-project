@@ -1,0 +1,651 @@
+/* ==============================
+   GLOBAL CSS
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+   background: #f1f5ff; 
+  color: #1e293b; 
+  font-family: Arial, sans-serif;
+  
+  overflow-x: hidden;
+ 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ==============================
+   MAIN CONTAINER
+============================== */
+
+.main_container {
+  width: 80%;
+  height: auto;
+  margin: 10px auto;
+  min-height: 90vh;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/* height: fit-content;
+overflow-y: hidden;  */
+}
+
+.main_card {
+  width: 100vh;
+  max-width: 600px; 
+   height: fit-content; 
+  overflow: hidden;
+   background: #f8fafc;  
+  border-radius: 25px;
+  text-align: center;
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); 
+  
+}
+
+/* ==============================
+   PROFILE SECTION
+============================== */
+
+.main_card_top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 25px;
+  padding: 25px;
+  padding-bottom: 10px;
+  background: linear-gradient(135deg, #3a528f, #1d2e5a);
+   /* border-radius: 20px; */
+   
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+}
+
+.main_card_top h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.main_card_top h2 span {
+  color: #a855f7;
+}
+
+/* ==============================
+   CARD SLIDER
+============================== */
+
+.card_slider {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding: 0 18px 30px;
+}
+
+.card_viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card_section {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 0;
+  align-items: stretch;
+  transition: transform 0.5s ease;
+}
+
+/* ==============================
+   PROFILE CARD
+============================== */
+
+.card_container {
+  position: relative;
+  overflow: hidden;
+  flex: 0 0 calc((100% - 12px) / 2);
+  width: auto;
+  max-width: none;
+  height: 250px;
+  margin: 0px;
+  background: #f1f2f4;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+   transition:transform 0.1s ease,
+}
+
+
+.card_container:hover{
+    transform:translateY(-3px);
+}
+
+/* Card Top */
+
+.card_container_top {
+  position: relative;
+  height: 32%;
+  width: 100%;
+  background: linear-gradient(135deg, #7138e8, #9333ea);
+}
+
+/* Navigation */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  width: 100%;
+  padding: 12px 8px;
+}
+
+.nav_link {
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav_link:hover {
+  color: #d8b4fe;
+}
+
+/* Profile Image */
+
+.card_container_top img {
+  height: 75px;
+  width: 75px;
+  border: 3px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Card Bottom */
+
+.card_container_bottom {
+  height: 68%;
+  width: 100%;
+  background: #f1f2f4;
+  padding: 38px 8px 12px;
+}
+
+.card_container_bottom h2 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.card_container_bottom p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #94a3b8;
+  text-align: center;
+  margin: 5px 0 10px;
+}
+
+/* ==============================
+   PROFILE BUTTONS
+============================== */
+
+.card_buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.card_buttons button {
+  padding: 8px 12px;
+  border-radius: 25px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.about_btn {
+  background: transparent;
+  color: #7138d8;
+  border: 1.5px solid #7138d8;
+}
+
+.hire_btn {
+  background: #7138d8;
+  color: white;
+  border: 1.5px solid #7138d8;
+}
+
+.about_btn:hover {
+  background: #7138d8;
+  color: white;
+}
+
+.hire_btn:hover {
+  background: #5825d5;
+}
+
+/* ==============================
+   SLIDER ARROWS
+============================== */
+
+.slider_btn {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #7138d8;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.slider_btn.prev {
+  left: 0;
+}
+
+.slider_btn.next {
+  right: 0;
+}
+
+.slider_btn:hover {
+  background: #7138d8;
+  color: white;
+}
+
+.slider_btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ==============================
+   SLIDER DOTS
+============================== */
+
+.slider_dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.slider_dots button {
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 50%;
+  background: #8c95a2;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slider_dots button.active {
+  width: 22px;
+  border-radius: 10px;
+  background: #7b19d7;
+}
+
+/* ==============================
+   FAQ SECTION
+============================== */
+
+.main_card_bottom {
+  width: 100%;
+  /* height: 50%; */
+  background: #e5eef7;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 15px 30px 10px;
+  border-radius:  0 0;
+  color: #111827;
+  font-family: Arial, sans-serif;
+}
+
+.main_card_bottom h2 {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* FAQ Container */
+
+.faq-container {
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+/* FAQ Question */
+
+.faq-question {
+  width: 100%;
+  min-height: 55px;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 16px;
+  background: #e9edfa;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #e0e7ff;
+}
+
+/* FAQ Arrow */
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #7138d8;
+  border-bottom: 2px solid #7138d8;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin-right: 6px;
+  margin-top: -6px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(225deg);
+  margin-top: 6px;
+}
+
+/* FAQ Answer */
+
+.faq-answer {
+  display: none;
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #64748b;
+  text-align: left;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ==============================
+   DARK MODE BUTTON
+============================== */
+
+.dark-mode-btn {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 5px;
+  padding: 10px;
+  border: 2px solid #7138d8;
+  border-radius: 40px;
+  background: transparent;
+  color: #7138d8;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.dark-mode-btn:hover {
+  background: #7138d8;
+  color: white;
+}
+
+/* ==============================
+   DARK MODE
+==============================*/
+
+.main_card_top.dark {
+  background: #111827;
+  border-radius: 0;
+}
+
+.main_card_top.dark .heading {
+  color: white;
+}
+
+.main_card_bottom.dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.main_card_bottom.dark h2 {
+  color: white;
+}
+
+.main_card_bottom.dark .faq-question {
+  background: #374151;
+  color: white;
+}
+
+.main_card_bottom.dark .faq-question:hover {
+  background: #4b5563;
+}
+
+.main_card_bottom.dark .arrow {
+  border-color: white;
+}
+
+.main_card_bottom.dark .faq-answer {
+  color: #cbd5e1;
+}
+
+.main_card_bottom.dark .dark-mode-btn {
+  color: white;
+  border-color: #9333ea;
+}
+
+.main_card_bottom.dark .dark-mode-btn:hover {
+  background: #7138d8;
+}
+
+/* ==============================
+   TABLET RESPONSIVE
+============================== */
+
+@media screen and (max-width: 768px) {
+  .main_card {
+    max-width: 600px;
+  }
+
+  .main_card_top {
+    padding: 25px 22px;
+  }
+
+  .main_card_top h2 {
+    font-size: 26px;
+  }
+
+  .card_container {
+    height: 240px;
+  }
+
+  .main_card_bottom {
+    padding: 22px;
+  }
+
+  .main_card_bottom h2 {
+    font-size: 23px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVE
+============================== */
+
+@media screen and (max-width: 600px) {
+  .main_container {
+    padding: 15px 10px;
+    align-items: center;
+  }
+
+  .main_card {
+    width: 100%;
+    max-width: 430px;
+    border-radius: 22px;
+  }
+
+  .main_card_top {
+    padding: 25px 18px;
+    gap: 20px;
+  }
+
+  .main_card_top h2 {
+    font-size: 24px;
+  }
+
+  /* One card at a time */
+
+  .card_container {
+     flex: 0 0 100%; 
+    height: 250px;
+  
+  }
+
+  .card_container_top img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .card_container_bottom h2 {
+    font-size: 17px;
+  }
+
+  .card_buttons button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  .slider_btn {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+
+  .main_card_bottom {
+    padding: 22px 18px 25px;
+    gap: 16px;
+  }
+
+  .main_card_bottom h2 {
+    font-size: 21px;
+  }
+
+  .faq-question {
+    min-height: 50px;
+    padding: 13px 15px;
+    font-size: 15px;
+  }
+
+  .dark-mode-btn {
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+}
+
+
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
+@media screen and (max-width: 350px) {
+  .main_card_top {
+    padding: 20px 12px;
+  }
+
+  .main_card_top h2 {
+    font-size: 21px;
+  }
+
+  .card_container {
+    height: 235px;
+  }
+
+  .card_container_bottom h2 {
+    font-size: 15px;
+  }
+
+  .card_container_bottom p {
+    font-size: 11px;
+  }
+
+  .card_buttons {
+    gap: 6px;
+  }
+
+  .card_buttons button {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .main_card_bottom {
+    padding: 18px 12px 22px;
+  }
+
+  .main_card_bottom h2 {
+    font-size: 19px;
+  }
+
+}
